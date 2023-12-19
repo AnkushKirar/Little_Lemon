@@ -1,0 +1,173 @@
+/* src/sass/App.css */
+@import 'normalize.css';
+/* Your other styles */
+$primary_color :#fffeea;
+$dark_color: #1a2a21;
+
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+@mixin FlexProp($direction,$js,$ai){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $js;
+    align-items: $ai;
+    
+
+}
+.Maindiv{
+    background-image: url("../assets/images/best-vegetarian-food-chennai-india-tamil-nadu-indian-tasty.jpg");
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+
+    
+}
+.navbar{
+    @include FlexProp(row,space-between, center);
+    width: 100dvw;
+    text-decoration: none;
+   margin: 0;
+   padding: 0;
+   height: 10rem
+}
+.logo{
+
+height: 7rem;
+max-width: 10rem;
+min-width: 6rem;
+margin: .2rem;
+text-align: centers;
+border: 5px solid $dark_color;
+border-left: 5px solid $dark_color;
+border-radius: 10px;
+padding: .2rem
+}
+.logo_section{
+    @include FlexProp(row,flex-end ,center );
+    margin:1rem;
+    color: $primary_color;
+    padding:.1rem
+    
+}
+
+
+.Nav_element{
+    
+    @include FlexProp(row,center,center );
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    background-color: yellow;
+    width: 30rem;
+    width: 26rem;
+   
+   
+
+}
+.nav_list_element{
+    color: $dark_color;
+    text-decoration: none;
+    margin-left: 2REM;
+    border-bottom: 2px solid transparent;
+    &:hover{
+        border-bottom: 2px solid black;
+        scale: 1.1;
+    }
+    &:focus{
+        color: rgb(24, 56, 44);
+    }
+}
+.login_button{
+    padding: .5rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+   
+    border-radius: .5rem;
+    background-color: rgb(241, 241, 50);
+    border: 2px solid transparent;
+   
+    &:hover{
+        cursor: pointer;
+        scale: 1.05;
+        
+    }
+}
+
+    
+    
+
+.hero_main{
+    @include FlexProp(row,center ,center );
+    padding:2rem;  
+}
+.Hero_Section{
+    @include FlexProp(row,center ,center );
+    margin: 1rem;
+    margin-top: 5rem;
+    border: 2px solid transparent;
+    background-color: #fffeea;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: yellow;
+    color: $dark_color;
+    font-size: larger;
+    &:hover{
+        scale: 1.05;
+        transition-duration: 200ms;
+    }
+    &:focus{
+        background-color: rgb(184, 184, 0);
+    }
+}
+.menucard{
+    @include FlexProp(row,space-around ,center );
+    width: 100vw;
+    height: auto;
+    flex-wrap: wrap;
+}
+.card{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 2rem;
+    width: 15rem;
+    max-width: 15rem;
+    min-width: 15rem;
+    height: 27rem;
+    @include FlexProp(column, space-around ,center );
+    flex-flow: column;
+    background-color: #EAECCC;
+    &:hover{
+        scale: 1.05;
+        transition-duration: 800ms;
+    
+    }
+
+    
+}
+.menu_image{
+    height: 14rem;
+    max-width: 15rem;
+    min-width: 15rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+.finalprice{
+    font-size: larger;
+    padding: 0px;
+    margin: 0px;
+}
+#final{
+    background-color:#C1F2B0;
+    padding: .5rem;
+    border-radius: 10px;
+}

@@ -1,0 +1,175 @@
+/* src/sass/App.css */
+@import 'normalize.css';
+/* Your other styles */
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.Maindiv {
+  background-image: url("../assets/images/best-vegetarian-food-chennai-india-tamil-nadu-indian-tasty.jpg");
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100dvw;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  height: 10rem;
+}
+
+.logo {
+  height: 7rem;
+  max-width: 10rem;
+  min-width: 6rem;
+  margin: 0.2rem;
+  text-align: centers;
+  border: 5px solid #1a2a21;
+  border-left: 5px solid #1a2a21;
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+.logo_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem;
+  color: #fffeea;
+  padding: 0.1rem;
+}
+
+.Nav_element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  width: 30rem;
+  width: 26rem;
+}
+
+.nav_list_element {
+  color: #1a2a21;
+  text-decoration: none;
+  margin-left: 2REM;
+  border-bottom: 2px solid transparent;
+}
+.nav_list_element:hover {
+  border-bottom: 2px solid black;
+  scale: 1.1;
+}
+.nav_list_element:focus {
+  color: rgb(24, 56, 44);
+}
+
+.login_button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(241, 241, 50);
+  border: 2px solid transparent;
+}
+.login_button:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.hero_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.Hero_Section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 5rem;
+  border: 2px solid transparent;
+  background-color: #fffeea;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: yellow;
+  color: #1a2a21;
+  font-size: larger;
+}
+.Hero_Section:hover {
+  scale: 1.05;
+  transition-duration: 200ms;
+}
+.Hero_Section:focus {
+  background-color: rgb(184, 184, 0);
+}
+
+.menucard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 2rem;
+  width: 15rem;
+  max-width: 15rem;
+  min-width: 15rem;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  background-color: #EAECCC;
+}
+.card:hover {
+  scale: 1.05;
+  transition-duration: 800ms;
+}
+
+.menu_image {
+  height: 14rem;
+  max-width: 15rem;
+  min-width: 15rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.finalprice {
+  font-size: larger;
+  padding: 0px;
+  margin: 0px;
+}
+
+#final {
+  background-color: #C1F2B0;
+  padding: 0.5rem;
+  border-radius: 10px;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,23 @@
+import React from 'react'
+import image from '../assets/images/Matar-Paneer.jpg'
+
+const MenuCard = () => {
+  const price = Math.ceil((Math.random())*200+1)
+  const discount = Math.ceil(((Math.random()*40)-1))
+  const final = Math.ceil((price/100)*(100-discount))
+
+  return (
+    <div className='menucard'>
+      <div className='card'>
+       <img src={image} alt="Image"  className='menu_image'/>
+       <pre className='finalprice'>Regular price: ${price}<p style={{backgroundColor:"#FFF6DC",textAlign:'center',borderRadius: '5px'}}>Discount:{discount}%</p></pre>
+       <p className='finalprice' id='final'>Offer Price:${final}</p>
+       <button className='Hero_Section' style={{margin:'0px'}}>Order Now</button>
+       
+      </div>
+    </div>
+  )
+}
+
+export default MenuCard;
+ 
