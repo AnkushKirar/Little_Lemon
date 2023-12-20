@@ -20,7 +20,6 @@ const Navbar = () => {
       
         <div className='Nav_element'>
           <Link className='nav_list_element'  to="/" >Home</Link>
-          <Link  className='nav_list_element't o="/OnlineO">Order</Link>
           <Link className='nav_list_element'  to="/TableB">Booking</Link>
           <Link className='nav_list_element'  to="/MenuCard">MenuCard</Link>
           <Link className='nav_list_element'  to="/AboutUs">AboutUs</Link>

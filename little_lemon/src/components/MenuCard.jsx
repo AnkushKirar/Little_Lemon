@@ -14,7 +14,7 @@ const MenuCard = () => {
     )
     const getPhotos = async ()=>{
         const mykey = "YFnDxftm9BmYX4S5pGpOrCIjmqcYfVIOO0ewNIzbfSp831yMLyNKiV0Z";
-        const api_pexelUrl = `https://api.pexels.com/v1/search/?query=food&page=${pageNumber}&per_page=1000`;
+        const api_pexelUrl = `https://api.pexels.com/v1/search/?query=food&page=${pageNumber}&per_page=10000`;
         try{
             const response = await axios.get(api_pexelUrl,{
                 headers:{
@@ -24,28 +24,25 @@ const MenuCard = () => {
             });
          setImage((prevPhotos)=>[...prevPhotos, ...response.data.photos])
         setPageNumber((prevPage)=> prevPage+1);
-    } catch(error){
+      } catch(error){
         console.log("Error Fetching Photos:",error);
+     }
+  };
+  const handleScroll = ()=>{
+    const threshold = 200;
+    const bottom = window.innerHeight + document.documentElement.scrollTop
+    if(bottom + threshold === document.documentElement.offsetHeight){
+      getPhotos();
     }
-};
-const handleScroll = ()=>{
-  const threshold = 200;
-  const bottom = window.innerHeight + document.documentElement.scrollTop
-    if(
-       bottom + threshold >=
-        document.document.documentElement.offsetHeight
-    ){
-          getPhotos();
-    }
-};
-      useEffect(()=>{
-        window.addEventListener('scroll',handleScroll);
-        return ()=>{
-            window.removeEventListener('scroll',handleScroll);
+  };
+    useEffect(()=>{
+     window.addEventListener('scroll',handleScroll);
+       return ()=>{
+         window.removeEventListener('scroll',handleScroll);
         };
       },[image,pageNumber]
 
-      )
+    )
      
 
   return (
