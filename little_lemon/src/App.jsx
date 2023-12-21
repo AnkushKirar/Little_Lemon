@@ -7,20 +7,25 @@ import Hero from './components/Hero';
 import OnlineO from './components/OnlineO';
 import TableB from './components/TableB';
 import AboutUs from './components/AboutUs';
-
+import Login_form from './components/Login_form';
 
 
 function App() {
+
+
  
 
   return (
     <div className='Maindiv' >  
     
     <Router>
-    <Navbar/>
+    <Navbar />
       <Routes>
       <Route path='/'
          element={<Hero />} 
+        ></Route>
+        <Route path='/OnlineO'
+         element={<OnlineO />} 
         ></Route>
         <Route path='/MenuCard'
          element={<MenuCard />} 
@@ -33,6 +38,9 @@ function App() {
         ></Route>
          <Route path='/AboutUs'
          element={<AboutUs />} 
+        ></Route>
+        <Route path='/Login_form'
+         element={<Login_form />} 
         ></Route>
       </Routes>
      

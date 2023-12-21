@@ -57,7 +57,7 @@ const MenuCard = () => {
             <img src={photo.src.medium} alt="Image" className='menu_image' />
             <pre className='finalprice'>Regular price: ${price}<p style={{ backgroundColor: "#FFF6DC", textAlign: 'center', borderRadius: '5px' }}>Discount: {discount}%</p></pre>
             <p className='finalprice' id='final'>Offer Price: ${final}</p>
-            <button className='Hero_Section' style={{ margin: '0px' }}>Order Now</button>
+            <button className='Order_button' style={{ margin: '0px' }}>Order Now</button>
           </div>
         );
       })}

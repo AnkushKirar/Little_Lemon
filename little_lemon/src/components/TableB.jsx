@@ -1,11 +1,18 @@
 import React from 'react'
+import image from '../assets/images/Asset 14@4x.png'
+
+import { Link } from 'react-router-dom'
 
 const TableB = () => {
+ 
+  
   return (
     <div className='grid_container'>
       <h2>Table Booking</h2>
 
     <div className='hero_section'>
+    <img src = {image} href = "logo" className = 'img'/>
+      
       <div className='Input_field' id='input_name' >
        <label htmlFor="Name">Name:</label><br />
        <input type="text" id='Name' placeholder='Ram singh' />
@@ -33,7 +40,7 @@ const TableB = () => {
          <option value="6">6</option>
        </select>
      </div>
-    <button  className='Hero_Section hero_button'>Submit</button>
+     <Link to = "/OnlineO"   className='Link' ><button  className='Hero_Section hero_button'>Submit</button></Link>
     </div> 
     </div>
   )

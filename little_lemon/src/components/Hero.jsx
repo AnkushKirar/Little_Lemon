@@ -1,7 +1,7 @@
 import React from 'react'
 import '../sass/App.scss'
-import Image from '../assets/images/best-vegetarian-food-chennai-india-tamil-nadu-indian-tasty.jpg'
 import { Link } from 'react-router-dom'
+
 
 
 const Hero = () => {

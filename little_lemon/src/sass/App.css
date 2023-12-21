@@ -3,7 +3,6 @@
 /* Your other styles */
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .Maindiv {
@@ -35,9 +34,9 @@ body {
   min-width: 6rem;
   margin: 0.2rem;
   text-align: centers;
-  border: 5px solid #1a2a21;
-  border-left: 5px solid #1a2a21;
-  border-radius: 10px;
+  border: 0.31rem solid #1a2a21;
+  border-left: 0.31rem solid #1a2a21;
+  border-radius: 0.62rem;
   padding: 0.2rem;
 }
 
@@ -109,7 +108,7 @@ body {
   margin-top: 5rem;
   border: 2px solid transparent;
   background-color: #fffeea;
-  border-radius: 5px;
+  border-radius: 0.31rem;
   padding: 1rem;
   background-color: yellow;
   color: #1a2a21;
@@ -146,7 +145,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-flow: column;
-  background-color: #EAECCC;
+  background-color: yellow;
 }
 .card:hover {
   scale: 1.05;
@@ -158,7 +157,7 @@ body {
   max-width: 15rem;
   min-width: 15rem;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 0.31rem;
   text-align: center;
 }
 
@@ -177,7 +176,7 @@ body {
 .grid_container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: larger;
   text-align: center;
@@ -188,15 +187,13 @@ body {
 .hero_section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 2.5rem;
+  row-gap: 0.5rem;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   background-color: rgb(255, 255, 28);
   margin-left: 5em;
   margin-right: 5rem;
   padding: 2rem;
-  min-width: -moz-min-content;
-  min-width: min-content;
   color: #1a2a21;
   border-radius: 2rem;
 }
@@ -204,46 +201,289 @@ body {
 #input_name {
   grid-area: a;
   grid-column: 1/3;
-  grid-row: 1;
+  grid-row: 2;
   margin: 2rem 0 0 2rem;
 }
 
 #email_name {
   grid-area: b;
   grid-column: 4/6;
-  grid-row: 1;
+  grid-row: 2;
   margin: 2rem 0 0 2rem;
 }
 
 #date {
   grid-area: c;
   grid-column: 2/3;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 #Time {
   grid-area: d;
   grid-column: 3/4;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 #Number_of_person {
   grid-area: e;
   grid-column: 4/5;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .hero_button {
   grid-area: f;
   grid-column: 3/4;
-  grid-row: 3;
+  grid-row: 4;
   background-color: #1a2a21;
   color: #fffeea;
+}
+
+.Link {
+  grid-column: 3/4;
+  grid-row: 4;
+  text-decoration: none;
 }
 
 #Name, #Email, #date, #Time, #people_number {
   height: 2rem;
   width: auto;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.Table_info {
+  border: 2px solid #1a2a21;
+}
+
+.Online_section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-color: yellow;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  color: #1a2a21;
+  flex-wrap: wrap;
+  height: 28rem;
+  min-width: 35rem;
+  border-radius: 10px;
+}
+
+.img {
+  height: 3rem;
+  display: block;
+  margin: 1rem;
+  grid-area: i;
+}
+
+.Online_section > :first-child {
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.Online_main {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #1a2a21;
+  border-radius: 10px;
+}
+
+.Online_element {
+  border: 1px solid black;
+  margin: 0%;
+  height: 3rem;
+  text-align: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.Online_button_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Online_button {
+  margin: 1rem;
+  padding: 0.3rem;
+  color: #fffeea;
+  border-radius: 6px;
+}
+
+.form {
+  margin: 0.6rem;
+  text-align: center;
+  border-radius: 1rem;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.heading {
+  text-align: center;
+}
+
+.button, .Order_button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid #fffeea;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0.62rem;
+  cursor: pointer;
+  border-radius: 0.62rem;
+}
+.button:hover, .Order_button:hover {
+  cursor: pointer;
+  border: 2px solid #1a2a21;
+}
+.button:focus, .Order_button:focus {
+  background-color: #28612a;
+}
+
+.input_login {
+  padding: 0.31rem;
+  margin: 0.31rem;
+  border-radius: 0.62rem;
+  background-color: #e9efe9;
+  color: rgb(19, 18, 18);
+  font-size: 0.62rem;
+  width: 10rem;
+  height: 2rem;
+}
+
+.heading {
+  font-size: 0.62rem;
+  color: #1a2a21;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.label {
+  font-size: 1.2rem;
+  padding: 0.31;
+  margin: 0.62rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login_conatiner {
+  display: inline-block;
+  border: 2px solid #1a2a21;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 0.5rem;
+}
+
+.heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  background-color: rgb(175, 224, 176);
+  margin: 20px;
+  padding: 0.62rem;
+  border-radius: 0.31rem;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  margin: 1rem 10rem 10rem 10rem;
+  padding: 0;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 1rem;
+}
+
+.login_form > :first-child {
+  justify-self: start;
+  align-self: flex-start;
+  margin: 1rem;
+  margin-left: 0;
+  position: relative;
+}
+
+.login_ing {
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+@media only screen and (width < 675px) {
+  .Nav_element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    grid-column-start: 1/2;
+    width: 10rem;
+    position: absolute;
+    right: 0rem;
+  }
+  html {
+    font-size: 10px;
+  }
+  .Maindiv {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+  }
+  .nav_list_element {
+    padding-bottom: 1rem;
+  }
+  .menu_button {
+    position: absolute;
+    justify-self: end;
+    top: 4rem;
+    width: 4rem;
+    z-index: 2;
+    display: block;
+    margin-right: 0.5rem;
+  }
+  .login_form {
+    margin: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+  }
+  .Online_button_div {
+    margin-top: 20rem;
+  }
+  .Online_section {
+    margin-top: 5rem;
+  }
+  .Hero_Section {
+    margin-top: 12rem;
+  }
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 2rem;
+    margin-top: 4rem;
+    width: 30rem;
+  }
+  .hero_button {
+    margin-top: 0rem;
+  }
+  .Input_field {
+    margin: 0.7rem;
+  }
+  .card {
+    background-color: yellow;
+  }
 }/*# sourceMappingURL=App.css.map */
