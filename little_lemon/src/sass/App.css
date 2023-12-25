@@ -6,7 +6,8 @@ body {
 }
 
 .Maindiv {
-  background-image: url("../assets/images/best-vegetarian-food-chennai-india-tamil-nadu-indian-tasty.jpg");
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  background-image: url(https://wallpapercave.com/wp/wp4087487.jpg);
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -18,25 +19,28 @@ body {
 
 .navbar {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 100dvw;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  height: 10rem;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 3rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+}
+
+.navbar > :first-child {
+  margin-right: auto;
+}
+
+.navbar > :last-child {
+  margin-left: auto;
 }
 
 .logo {
-  height: 7rem;
+  height: 2rem;
   max-width: 10rem;
   min-width: 6rem;
   margin: 0.2rem;
-  text-align: centers;
-  border: 0.31rem solid #1a2a21;
-  border-left: 0.31rem solid #1a2a21;
-  border-radius: 0.62rem;
+  text-align: center;
   padding: 0.2rem;
 }
 
@@ -52,16 +56,12 @@ body {
 
 .Nav_element {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0 2rem;
   border-radius: 1rem;
-  background-color: yellow;
-  width: 30rem;
-  width: 26rem;
+  background-color: rgb(244, 244, 187);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav_list_element {
@@ -72,7 +72,6 @@ body {
 }
 .nav_list_element:hover {
   border-bottom: 2px solid black;
-  scale: 1.1;
 }
 .nav_list_element:focus {
   color: rgb(24, 56, 44);
@@ -80,46 +79,36 @@ body {
 
 .login_button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-right: 1rem;
+  grid-area: c;
+  grid-column: 4/5;
+  color: white;
   border-radius: 0.5rem;
-  background-color: rgb(241, 241, 50);
+  background-color: rgb(20, 47, 21);
   border: 2px solid transparent;
 }
 .login_button:hover {
   cursor: pointer;
-  scale: 1.05;
 }
 
 .hero_main {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
   align-items: center;
-  padding: 2rem;
+  justify-content: start;
+  width: 30%;
+  margin: 3rem;
+  font-size: 1.7rem;
 }
 
-.Hero_Section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  margin-top: 5rem;
-  border: 2px solid transparent;
-  background-color: #fffeea;
-  border-radius: 0.31rem;
-  padding: 1rem;
+.Hero_button {
+  padding: 0.7rem;
+  margin-left: 0rem;
   background-color: yellow;
-  color: #1a2a21;
-  font-size: larger;
-}
-.Hero_Section:hover {
-  scale: 1.05;
-  transition-duration: 200ms;
-}
-.Hero_Section:focus {
-  background-color: rgb(184, 184, 0);
+  border: 2px solid transparent;
+  border-radius: 10px;
 }
 
 .menucard {
@@ -135,21 +124,17 @@ body {
 .card {
   border: 1px solid transparent;
   border-radius: 10px;
-  margin: 2rem;
+  margin: 1rem;
   width: 15rem;
   max-width: 15rem;
   min-width: 15rem;
   height: 27rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  flex-flow: column;
-  background-color: yellow;
-}
-.card:hover {
-  scale: 1.05;
-  transition-duration: 800ms;
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .menu_image {
@@ -190,57 +175,49 @@ body {
   row-gap: 0.5rem;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  background-color: rgb(255, 255, 28);
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
   margin-left: 5em;
   margin-right: 5rem;
   padding: 2rem;
+  gap: 1rem;
   color: #1a2a21;
   border-radius: 2rem;
+  grid-template-areas: " i i i i i" "a a b b b" "c c d e e" "c c  f e e";
+}
+
+.img {
+  grid-area: i;
 }
 
 #input_name {
   grid-area: a;
-  grid-column: 1/3;
-  grid-row: 2;
   margin: 2rem 0 0 2rem;
 }
 
 #email_name {
   grid-area: b;
-  grid-column: 4/6;
-  grid-row: 2;
   margin: 2rem 0 0 2rem;
 }
 
 #date {
   grid-area: c;
-  grid-column: 2/3;
-  grid-row: 3;
 }
 
 #Time {
   grid-area: d;
-  grid-column: 3/4;
-  grid-row: 3;
 }
 
 #Number_of_person {
   grid-area: e;
-  grid-column: 4/5;
-  grid-row: 3;
 }
 
 .hero_button {
   grid-area: f;
-  grid-column: 3/4;
-  grid-row: 4;
   background-color: #1a2a21;
   color: #fffeea;
 }
 
 .Link {
-  grid-column: 3/4;
-  grid-row: 4;
   text-decoration: none;
 }
 
@@ -257,17 +234,14 @@ body {
 
 .Online_section {
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  color: #1a2a21;
-  flex-wrap: wrap;
-  height: 28rem;
-  min-width: 35rem;
+  margin: 2rem;
+  padding: 2rem;
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  color: #1a2a21;
 }
 
 .img {
@@ -351,7 +325,6 @@ body {
   margin: 0.31rem;
   border-radius: 0.62rem;
   background-color: #e9efe9;
-  color: rgb(19, 18, 18);
   font-size: 0.62rem;
   width: 10rem;
   height: 2rem;
@@ -376,6 +349,7 @@ body {
   padding: 50px;
   margin: 20px;
   border-radius: 0.5rem;
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
 }
 
 .heading {
@@ -383,7 +357,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   display: block;
-  background-color: rgb(175, 224, 176);
   margin: 20px;
   padding: 0.62rem;
   border-radius: 0.31rem;
@@ -394,7 +367,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
   margin: 1rem 10rem 10rem 10rem;
   padding: 0;
   height: -moz-max-content;
@@ -415,6 +387,48 @@ body {
   margin-left: 0.5rem;
 }
 
+.Footer {
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_img {
+  height: 20rem;
+  width: 10rem;
+}
+
+.footer_element {
+  color: #1a2a21;
+  padding: 1.5rem;
+}
+
+li {
+  list-style: none;
+  font-size: 6rem;
+  color: #4CAF50;
+}
+
+.footer_copyright {
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  margin: 0.1rem;
+}
+.footer_copyright h5 {
+  text-align: center;
+  margin-bottom: 0px;
+  font: 1em sans-serif;
+  margin: 0;
+}
+
 @media only screen and (width < 675px) {
   .Nav_element {
     display: flex;
@@ -422,10 +436,14 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
+    padding: 2.1rem;
+    padding-top: 12rem;
     grid-column-start: 1/2;
     width: 10rem;
     position: absolute;
-    right: 0rem;
+    margin-right: 0rem;
+    right: 0;
+    height: 98rem;
   }
   html {
     font-size: 10px;
@@ -433,22 +451,34 @@ body {
   .Maindiv {
     width: 100vw;
     overflow-x: hidden;
+    background-image: url(https://i.pinimg.com/736x/52/47/c8/5247c855afaf52e9e3fb698f1ba10a2a.jpg);
   }
   .navbar {
-    display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navbar .logo {
+    align-self: center;
+    justify-self: center;
+  }
+  .logo {
+    height: 3rem;
+    margin-left: 12rem;
   }
   .nav_list_element {
     padding-bottom: 1rem;
   }
+  .hero_main {
+    margin: 11rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
   .menu_button {
-    position: absolute;
-    justify-self: end;
-    top: 4rem;
-    width: 4rem;
     z-index: 2;
-    display: block;
-    margin-right: 0.5rem;
   }
   .login_form {
     margin: 2.6rem;
@@ -459,7 +489,7 @@ body {
     width: 85vw;
   }
   .Online_button_div {
-    margin-top: 20rem;
+    margin-top: 1rem;
   }
   .Online_section {
     margin-top: 5rem;
@@ -486,4 +516,18 @@ body {
   .card {
     background-color: yellow;
   }
+  .footer_img {
+    height: 10rem;
+    width: 5rem;
+  }
+}
+.about-us {
+  background-image: linear-gradient(184.1deg, rgb(249, 255, 182) 44.7%, rgb(226, 255, 172) 67.2%);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+.about-us h6, .about-us h5 {
+  font-size: 1rem;
+  color: #1a2a21;
 }/*# sourceMappingURL=App.css.map */

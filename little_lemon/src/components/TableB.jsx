@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/images/Asset 14@4x.png'
+import { motion } from 'framer-motion' 
 
 import { Link } from 'react-router-dom'
 
@@ -7,7 +8,7 @@ const TableB = () => {
  
   
   return (
-    <div className='grid_container'>
+    <motion.div initial={{opacity:0,scale:.3}} animate={{opacity:1,scale:1}} transition={{duration:1}}  className='grid_container'>
       <h2>Table Booking</h2>
 
     <div className='hero_section'>
@@ -40,9 +41,9 @@ const TableB = () => {
          <option value="6">6</option>
        </select>
      </div>
-     <Link to = "/OnlineO"   className='Link' ><button  className='Hero_Section hero_button'>Submit</button></Link>
+     <Link to = "/OnlineO" style={{marginTop:"1rem"}}  className='Link' ><button  style={{marginTop:"1rem"}} className='Hero_Section Hero_button'>Submit</button></Link>
     </div> 
-    </div>
+    </motion.div>
   )
 }
 

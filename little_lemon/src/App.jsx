@@ -8,6 +8,8 @@ import OnlineO from './components/OnlineO';
 import TableB from './components/TableB';
 import AboutUs from './components/AboutUs';
 import Login_form from './components/Login_form';
+import Footet from './components/Footet';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
  
 
   return (
+    <>
     <div className='Maindiv' >  
     
     <Router>
@@ -43,9 +46,10 @@ function App() {
          element={<Login_form />} 
         ></Route>
       </Routes>
-     
     </Router>
     </div>
+    <Footet/>
+    </>
   )
 }
 

@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
+import { easeInOut, motion } from 'framer-motion';
+
 
 
 const MenuCard = () => {
@@ -53,12 +55,17 @@ const MenuCard = () => {
         const final = Math.ceil((price / 100) * (100 - discount));
 
         return (
-          <div className='card'>
+          <motion.div
+          initial={{opacity:0,scale:.1}}
+          whileInView={{opacity:1,scale:1}}
+          transition={{duration:1,delay:.2,transition:easeInOut}}
+          
+          className='card'>
             <img src={photo.src.medium} alt="Image" className='menu_image' />
             <pre className='finalprice'>Regular price: ${price}<p style={{ backgroundColor: "#FFF6DC", textAlign: 'center', borderRadius: '5px' }}>Discount: {discount}%</p></pre>
             <p className='finalprice' id='final'>Offer Price: ${final}</p>
             <button className='Order_button' style={{ margin: '0px' }}>Order Now</button>
-          </div>
+          </motion.div>
         );
       })}
     </div>

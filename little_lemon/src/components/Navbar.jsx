@@ -1,8 +1,9 @@
 import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Images from '../assets/images/Asset 9@4x.png'
+import Images from '../assets/images/Asset 14@4x.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser,faBars } from '@fortawesome/free-solid-svg-icons'
+import { faUser,faBars,faX } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [mobile ,setMobile] = useState(window.innerWidth<675);
@@ -26,10 +27,10 @@ const Navbar = () => {
   return (
     <>
     <div className='navbar'>
-      <div className='logo_section'>
-        <img src={Images} alt='' className='logo' /><br />
-        <h1>Little <br />Lemon</h1>
-      </div>
+      
+        <motion.img initial={{opacity:0,scale:6}} animate={{opacity:1,scale:1}} transition={{duration:1,delay:.5}}  src={Images} alt='logo' className='logo'  /><br />
+        
+      
   
       {!mobile ? (<>
         <div className='Nav_element'>
@@ -38,13 +39,14 @@ const Navbar = () => {
           <Link className='nav_list_element' to="/MenuCard">MenuCard</Link>
           <Link className='nav_list_element' to="/AboutUs">AboutUs</Link>
         </div>
-        <Link className='nav_list_element' to="/Login_form">
-        <FontAwesomeIcon icon={faUser} className='login_button login_icon ' />
+        <Link style={{color:"white"}}className='nav_list_element login_button login_icon ' to="/Login_form">
+        Login
       </Link></>
       ) : (
         <>
-           <button onClick={()=>toggle()} className='login_button menu_button'  ><FontAwesomeIcon icon={faBars}  /></button>
-          {open ? (
+          {open ? (<>
+            <button onClick={()=>toggle()} className='login_button menu_button'  ><FontAwesomeIcon icon={faX}  /></button>
+
             <div className='Nav_element'>
             <Link className='nav_list_element' to="/Login_form">
             <FontAwesomeIcon icon={faUser} className='login_button login_icon ' />
@@ -54,9 +56,11 @@ const Navbar = () => {
               <Link className='nav_list_element' to="/MenuCard">MenuCard</Link>
               <Link className='nav_list_element' to="/AboutUs">AboutUs</Link>
             </div>
+            </>
             
             
-          ) : (null)}
+          ) : (<button onClick={()=>toggle()} className='login_button menu_button'  ><FontAwesomeIcon icon={faBars}  /></button>
+          )}
         </>
       )}
   
